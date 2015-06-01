@@ -1,5 +1,5 @@
 /// <reference path="./EventStore/Collections.ts"/>
-/// <reference path="./Inventory/Item.ts"/>
+/// <reference path="./Inventory/handlers.ts"/>
 
 module Program {
 	function padStringRight(str: string, len: number) {
