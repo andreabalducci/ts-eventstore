@@ -1,0 +1,31 @@
+{
+  "name": "ts-eventstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreabalducci/ts-eventstore.git"
+  },
+  "author": "Andrea Balducci (mtb.snowboard@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreabalducci/ts-eventstore/issues"
+  },
+  "homepage": "https://github.com/andreabalducci/ts-eventstore",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.7.4",
+    "merge2": "^0.3.5",
+    "typescript": "^1.5.0-beta"
+  }
+}
