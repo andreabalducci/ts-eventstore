@@ -2,4 +2,4 @@
 typescript learning project
 
 Open developer tools and run 
-https://rawgit.com/andreabalducci/ts-eventstore/master/build/inventory.html
+https://rawgit.com/andreabalducci/ts-eventstore/master/build/index.html
