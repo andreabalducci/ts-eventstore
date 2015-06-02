@@ -1,8 +1,8 @@
 import * as Collections from "./eventstore/Collections"
 import * as EventStore from "./eventstore/EventStore"
-import * as Projections from "./Inventory/projections"
-import {HandlersRegistration} from "./Inventory/handlers"
-import * as Commands from "./Inventory/commands"
+import * as Projections from "./inventory/projections"
+import {HandlersRegistration} from "./inventory/handlers"
+import * as Commands from "./inventory/commands"
 
 	var bus = EventStore.Bus.Default;
 	var itemsList = new Projections.ItemsList();
