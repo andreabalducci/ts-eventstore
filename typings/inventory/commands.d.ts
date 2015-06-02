@@ -1,4 +1,4 @@
-import * as EventStore from "../EventStore/EventStore";
+import * as EventStore from "../eventstore/EventStore";
 export declare class RegisterItem extends EventStore.Command {
     itemId: string;
     sku: string;

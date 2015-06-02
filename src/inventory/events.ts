@@ -1,4 +1,4 @@
-import * as EventStore from "../EventStore/EventStore"
+import * as EventStore from "../eventstore/EventStore"
 
 
 	/* events */

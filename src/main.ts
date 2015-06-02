@@ -1,5 +1,5 @@
-import * as Collections from "./EventStore/Collections"
-import * as EventStore from "./EventStore/EventStore"
+import * as Collections from "./eventstore/Collections"
+import * as EventStore from "./eventstore/EventStore"
 import * as Projections from "./Inventory/projections"
 import {HandlersRegistration} from "./Inventory/handlers"
 import * as Commands from "./Inventory/commands"

@@ -1,4 +1,4 @@
-import * as EventStore from "../EventStore/EventStore";
+import * as EventStore from "../eventstore/EventStore";
 export declare class ItemState extends EventStore.AggregateState {
     private disabled;
     private inStock;
