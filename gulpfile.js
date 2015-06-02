@@ -5,6 +5,8 @@ var exec = require('child_process').exec;
 var plugins = require('gulp-load-plugins')();
 
 var tsProject = plugins.typescript.createProject({
+    module:"commonjs",
+    target:"ES5",
     declarationFiles: true,
     noExternalResolve: false,
     sortOutput:true,

@@ -1,26 +1,25 @@
-/// <reference path="./EventStore/Collections.ts"/>
-/// <reference path="./Inventory/handlers.ts"/>
-/// <reference path="./Inventory/projections.ts"/>
-
-module Program {
-
+import * as Collections from "./EventStore/Collections"
+import * as EventStore from "./EventStore/EventStore"
+import * as Projections from "./Inventory/projections"
+import {HandlersRegistration} from "./Inventory/handlers"
+import * as Commands from "./Inventory/commands"
 
 	var bus = EventStore.Bus.Default;
-	var itemsList = new Inventory.ItemsList();
+	var itemsList = new Projections.ItemsList();
 
 	function configure() {
 		/* Handlers setup */
-		Inventory.Handlers.Register(bus);
+		HandlersRegistration.Register(bus);
 		bus.subscribe(itemsList);
 	}
 
 	function run() {
 		try {
-			bus.send(new Inventory.RegisterItem("item_1", "TS", "Intro to typescript"));
-			bus.send(new Inventory.RegisterItem("item_2", "NG", "Intro to angularjs"));
-			bus.send(new Inventory.LoadItem("item_1", 100));
-			bus.send(new Inventory.PickItem("item_1", 69));
-			bus.send(new Inventory.DisableItem("item_1"));
+			bus.send(new Commands.RegisterItem("item_1", "TS", "Intro to typescript"));
+			bus.send(new Commands.RegisterItem("item_2", "NG", "Intro to angularjs"));
+			bus.send(new Commands.LoadItem("item_1", 100));
+			bus.send(new Commands.PickItem("item_1", 69));
+			bus.send(new Commands.DisableItem("item_1"));
 		} catch (error) {
 			console.error(error.message);
 		}
@@ -31,4 +30,3 @@ module Program {
 	run();
 
 	EventStore.Persistence.dump();
-}

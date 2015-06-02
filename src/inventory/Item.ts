@@ -1,6 +1,6 @@
-/// <reference path="../EventStore/EventStore.ts"/>
-/// <reference path="events.ts"/>
-module Inventory {
+import * as EventStore from "../EventStore/EventStore"
+import * as Events from "events"
+
 	/* state & aggregate */
 
 	export class ItemState extends EventStore.AggregateState  {
@@ -10,10 +10,10 @@ module Inventory {
 		
 		constructor() {
 			super();
-			this.On(ItemDisabled.Type, e=> this.disabled = true);
-			this.On(ItemLoaded.Type, e=> this.inStock += e.quantity);
-			this.On(ItemPicked.Type, e=> this.inStock -= e.quantity);
-			this.On(ItemCreated.Type, e => this.sku = e.sku);
+			this.On(Events.ItemDisabled.Type, e=> this.disabled = true);
+			this.On(Events.ItemLoaded.Type, e=> this.inStock += e.quantity);
+			this.On(Events.ItemPicked.Type, e=> this.inStock -= e.quantity);
+			this.On(Events.ItemCreated.Type, e => this.sku = e.sku);
 			
 			this.addCheck({name:"Item must have a SKU", rule : ()=>
 				this.sku != null
@@ -38,26 +38,26 @@ module Inventory {
 		}
 
 		register(id: string, description: string) {
-			this.RaiseEvent(new ItemCreated(id, description));
+			this.RaiseEvent(new Events.ItemCreated(id, description));
 		}
 
 		disable() {
 			if (!this.State.hasBeenDisabled()) {
-				this.RaiseEvent(new ItemDisabled());
+				this.RaiseEvent(new Events.ItemDisabled());
 			}
 		}
 
 		load(quantity: number): void {
 			Error()
-			this.RaiseEvent(new ItemLoaded(quantity))
+			this.RaiseEvent(new Events.ItemLoaded(quantity))
 		}
 
 		unLoad(quantity: number): void {
 			var currentStock = this.State.stockLevel();
 			if (currentStock >= quantity) {
-				this.RaiseEvent(new ItemPicked(quantity))
+				this.RaiseEvent(new Events.ItemPicked(quantity))
 			} else {
-				this.RaiseEvent(new ItemPickingFailed(quantity, currentStock));
+				this.RaiseEvent(new Events.ItemPickingFailed(quantity, currentStock));
 			}
 		}
 		
@@ -65,4 +65,3 @@ module Inventory {
 			return new Item(id);
 		}
 	}
-}

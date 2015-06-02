@@ -1,6 +1,6 @@
-/// <reference path="../EventStore/EventStore.ts"/>
+import * as EventStore from "../EventStore/EventStore"
 
-module Inventory {
+
 	/* events */
 	export class ItemCreated extends EventStore.Event {
 		static Type: ItemCreated = new ItemCreated(null, null);
@@ -36,4 +36,3 @@ module Inventory {
 			super();
 		}
 	}
-}

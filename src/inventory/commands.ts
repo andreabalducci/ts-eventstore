@@ -1,6 +1,5 @@
-/// <reference path="../EventStore/EventStore.ts"/>
+import * as EventStore from "../EventStore/EventStore"
 
-module Inventory {
 	/* Commands */
 	export class RegisterItem extends EventStore.Command{
 		static Type: RegisterItem = new RegisterItem(null,null,null);
@@ -33,4 +32,3 @@ module Inventory {
 			super();
 		}
 	}
-}
