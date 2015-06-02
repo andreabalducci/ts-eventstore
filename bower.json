@@ -1,0 +1,25 @@
+{
+  "name": "ts-eventstore",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andreabalducci/ts-eventstore",
+  "authors": [
+    "Andea Balducci <mtb.snowboard@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.18"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.18"
+  }
+}

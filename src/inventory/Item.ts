@@ -1,5 +1,5 @@
 import * as EventStore from "../EventStore/EventStore"
-import * as Events from "events"
+import * as Events from "./events"
 
 	/* state & aggregate */
 

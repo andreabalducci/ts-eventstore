@@ -7,7 +7,7 @@
     ],
     "tasks": [
         {
-            "taskName": "scripts",
+            "taskName": "build",
             "args": [],
             "isBuildCommand": true,
             "problemMatcher": [

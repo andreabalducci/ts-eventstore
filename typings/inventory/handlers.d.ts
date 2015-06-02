@@ -1,5 +1,5 @@
 import * as EventStore from "../EventStore/EventStore";
-import * as Commands from "commands";
+import * as Commands from "./commands";
 export declare class RegisterItemHandler implements EventStore.ICommandHandler<Commands.RegisterItem> {
     constructor(bus: EventStore.Bus);
     Handle(command: Commands.RegisterItem): void;

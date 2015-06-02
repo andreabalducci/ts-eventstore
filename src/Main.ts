@@ -30,3 +30,7 @@ import * as Commands from "./Inventory/commands"
 	run();
 
 	EventStore.Persistence.dump();
+
+
+
+console.log('started');

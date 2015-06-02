@@ -20,11 +20,14 @@
     "express": "^4.12.3"
   },
   "devDependencies": {
+    "del": "^1.2.0",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
+    "gulp-flatten": "0.0.4",
     "gulp-load-plugins": "^0.10.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-typescript": "^2.7.4",
+    "main-bower-files": "^2.8.0",
     "merge2": "^0.3.5",
     "typescript": "^1.5.0-beta"
   }

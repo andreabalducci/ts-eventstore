@@ -1,5 +1,5 @@
 /// <reference path="Collections.ts"/>
-import * as Collections from "Collections";
+import * as Collections from "./Collections";
 
 
 /* Interfaces */

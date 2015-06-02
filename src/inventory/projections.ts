@@ -1,6 +1,6 @@
 import * as Collections from "../EventStore/Collections"
 import * as EventStore from "../EventStore/EventStore"
-import * as Events from "events"
+import * as Events from "./events"
 
 function padStringRight(str: string, len: number) {
 	const padding = "                             ";

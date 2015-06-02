@@ -1,6 +1,6 @@
 import * as EventStore from "../EventStore/EventStore"
-import * as Commands from "commands"
-import {Item} from "item"
+import * as Commands from "./commands"
+import {Item} from "./item"
 
 /* handlers */
 	export class RegisterItemHandler implements EventStore.ICommandHandler<Commands.RegisterItem>{

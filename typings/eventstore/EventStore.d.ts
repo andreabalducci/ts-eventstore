@@ -1,5 +1,5 @@
 /// <reference path="Collections.d.ts" />
-import * as Collections from "Collections";
+import * as Collections from "./Collections";
 export interface ICommand {
     commandId: string;
 }
